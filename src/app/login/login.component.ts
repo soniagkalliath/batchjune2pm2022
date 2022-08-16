@@ -39,12 +39,36 @@ database:any={
   }
 
 
-  login(){
+  // login(){
 
+  //   //fetch acno 
+  //   var acno = this.acno
+  //   //fetch pswd
+  //   var pswd = this.pswd
+    
+  //   let userDetails = this.database
+  //   if(acno in userDetails){
+  //     if(pswd == userDetails[acno]['password']){
+  //       alert('Log in successfull')
+  //     }
+  //     else{
+  //       alert('Incorrect password')
+  //     }
+  //   }
+  //   else{
+  //     alert('user does not exist')
+  //   }
+
+  // }
+
+  login(a:any,p:any){
+
+    console.log(a);
+    
     //fetch acno 
-    var acno = this.acno
+    var acno = a.value
     //fetch pswd
-    var pswd = this.pswd
+    var pswd = p.value
     
     let userDetails = this.database
     if(acno in userDetails){
