@@ -38,3 +38,13 @@
 
                         3.1.2.3 Template Referencing variable: syntax: #variable-name
 
+                3.2 Two Way Binding - same time data shairing in both direction
+
+                    3.2.1 FormsModule - Import in AppModule
+
+                        ngModel - syntax: [(ngModel)]="variable-name"
+
+            4. Component Path set up
+
+            5. Depending Injection - inside constructor of a class
+

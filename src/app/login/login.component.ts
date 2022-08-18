@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -23,57 +24,27 @@ database:any={
   1002:{acno:1002,username:'Vyom',password:1002,balance:5000}
 }
 
-  constructor() { }
+  constructor(private router:Router) { }
 
   ngOnInit(): void {
   }
 
   //user defined function
 
-  acnoChange(event:any){
-    this.acno = event.target.value
-  }
 
-  pswdChange(event:any){
-    this.pswd = event.target.value
-  }
+  login(){
 
-
-  // login(){
-
-  //   //fetch acno 
-  //   var acno = this.acno
-  //   //fetch pswd
-  //   var pswd = this.pswd
-    
-  //   let userDetails = this.database
-  //   if(acno in userDetails){
-  //     if(pswd == userDetails[acno]['password']){
-  //       alert('Log in successfull')
-  //     }
-  //     else{
-  //       alert('Incorrect password')
-  //     }
-  //   }
-  //   else{
-  //     alert('user does not exist')
-  //   }
-
-  // }
-
-  login(a:any,p:any){
-
-    console.log(a);
-    
     //fetch acno 
-    var acno = a.value
+    var acno = this.acno
     //fetch pswd
-    var pswd = p.value
+    var pswd = this.pswd
     
     let userDetails = this.database
     if(acno in userDetails){
       if(pswd == userDetails[acno]['password']){
         alert('Log in successfull')
+        //navigate to dashboard
+        this.router.navigateByUrl('dashboard')
       }
       else{
         alert('Incorrect password')
@@ -85,4 +56,8 @@ database:any={
 
   }
 
+  
+
 }
+
+

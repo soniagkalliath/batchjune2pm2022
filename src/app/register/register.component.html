@@ -1,0 +1,35 @@
+
+<div class="row">
+
+    <div class="col-lg-4"></div>
+    <div class="col-lg-4 " style="margin-top: 200px;">
+        <div class="border container">
+            <h2 class="text-center text-primary">Register Form</h2>
+            <form action="" class="  p-5">
+                <!-- username -->
+                <div class="m-3">
+                   
+                    <input [(ngModel)]="uname" name="uname" class="form-control" type="text" placeholder="Username">
+                
+                </div>
+                <div class="m-3">
+                  
+                    <input [(ngModel)]="acno" name="acno" class="form-control" type="text" placeholder="Account Number">
+                
+                </div>
+                <div class="m-3">
+                    <!-- password -->
+                    <input [(ngModel)]="pswd" name="pswd" class="form-control" type="password" placeholder="password" >
+                </div>
+                <div class="m-3">
+                    <input (click)="register()" class="btn btn-primary" type="button" value="Register" name="" id="loginBtn">
+                </div>
+            </form>
+            <div>
+                <label for=""> Already user? Click here to<a routerLink=""> Log In</a>  </label>
+            </div>
+        </div>   
+       
+    </div>
+    <div class="col-lg-4"></div>
+</div>

@@ -10,19 +10,20 @@
     
                 <div class="m-3">
                     <!-- acno (change)="acnoChange($event)"-->
-                    <input #acno class="form-control" type="text" [placeholder]="accPlaceholder">
+                    <!-- #acno - template reference -->
+                    <input [(ngModel)]="acno" name="acno" class="form-control" type="text" [placeholder]="accPlaceholder">
                 
                 </div>
                 <div class="m-3">
                     <!-- password -->
-                    <input #pswd class="form-control" type="password" placeholder="password" >
+                    <input [(ngModel)]="pswd" name="pswd" class="form-control" type="password" placeholder="password" >
                 </div>
                 <div class="m-3">
-                    <input (click)="login(acno,pswd)" class="btn btn-primary" type="button" value="Log In" name="" id="loginBtn">
+                    <input (click)="login()" class="btn btn-primary" type="button" value="Log In" name="" id="loginBtn">
                 </div>
             </form>
             <div>
-                <label for=""> Not a user? Click here to<a href=""> register</a>  </label>
+                <label for=""> Not a user? Click here to<a routerLink="register"> register</a>  </label>
             </div>
         </div>   
        
